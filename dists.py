@@ -1,11 +1,12 @@
 from scipy.stats import uniform, truncnorm, truncexpon, crystalball
+import numpy as np
 
 
 # Define the truncated distributions with given parameters
 def g_s(x, beta, m, mu, sigma):
+    x = np.clip(x, 0, 5) # Truncate x to [0, 5]
     cb = crystalball(beta=beta, m=m, loc=mu, scale=sigma)
     return cb.pdf(x) / (cb.cdf(5) - cb.cdf(0))
-
 
 def h_s(x, lmda):
     return truncexpon.pdf(x, b=10*lmda, loc=0, scale=1/lmda)
