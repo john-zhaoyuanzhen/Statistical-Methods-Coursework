@@ -1,5 +1,4 @@
 from numba_stats import uniform, truncnorm, truncexpon, crystalball
-import numba as nb
 import numpy as np
 
 
