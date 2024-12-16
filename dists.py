@@ -4,7 +4,7 @@ import numpy as np
 
 # Define the truncated distributions with given parameters using numba_stats
 def g_s(x, beta, m, mu, sigma):
-    x = np.clip(x, 0, 5) # Truncate x to [0, 5]
+    x = np.where((x < 0) | (x > 5), 0.0, x) # Truncate x to [0, 5]
     num = crystalball.pdf(x, beta=beta, m=m, loc=mu, scale=sigma)
     denom = crystalball.cdf(5., beta=beta, m=m, loc=mu, scale=sigma) - crystalball.cdf(0., beta=beta, m=m, loc=mu, scale=sigma)
     return num / denom
@@ -13,6 +13,7 @@ def h_s(x, lmda, xmin=0., xmax=10.):
     return truncexpon.pdf(x, xmin=xmin, xmax=xmax, loc=0., scale=1/lmda)
 
 def g_b(x):
+    x = np.where((x < 0) | (x > 5), 0.0, x) # Truncate x to [0, 5]
     return uniform.pdf(x, a = 0., w = 5.)
 
 def h_b(x, mu_b, sigma_b):
