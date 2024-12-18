@@ -13,5 +13,5 @@ dependencies:
   - ipykernel
   - jupyter
   - pip:
-    - sweights==1.6.0
-    - numba-stats==1.10.0
+      - sweights==1.6.0
+      - numba-stats==1.10.0
