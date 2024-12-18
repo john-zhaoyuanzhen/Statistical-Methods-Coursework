@@ -1,12 +1,17 @@
-name: myenv
+name: s1_env
 channels:
   - defaults
   - conda-forge
 dependencies:
-  - python >= 3.9
+  - python=3.12
+  - pip=24.2.0
   - numpy=2.0.2
   - matplotlib=3.9.2
   - scipy=1.14.1
   - iminuit=2.30.1
-  - sweights=1.6.0
   - tqdm=4.67.1
+  - ipykernel
+  - jupyter
+  - pip:
+    - sweights==1.6.0
+    - numba-stats==1.10.0
