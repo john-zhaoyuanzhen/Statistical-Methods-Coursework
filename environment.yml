@@ -12,6 +12,6 @@ dependencies:
   - tqdm=4.67.1
   - ipykernel
   - jupyter
+  - numba-stats
   - pip:
       - sweights==1.6.0
-      - numba-stats==1.10.0
