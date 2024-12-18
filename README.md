@@ -1,3 +1,7 @@
+# S1 Coursework
+
+--------------
+
 ## Git Clone
 ```bash
 git clone https://gitlab.developers.cam.ac.uk/phy/data-intensive-science-mphil/assessments/s1_coursework/yz929.git
@@ -16,5 +20,9 @@ Run below to deactivate conda environment.
 conda deactivate
 ```
 
+## Report
+
+The report is written in `LaTeX` language and the file itself is located in the `report` folder.
+
 ## Use of Auto-Generation Tools
-I asked ChatGPT to introduce the use of `dblquad` with its limits, brief the inverse transform sampling method, give timeit magic function instruction.
+I asked ChatGPT to introduce the use of `dblquad` with its limits, brief the **inverse transform sampling** method and give **timeit magic function** instruction.
