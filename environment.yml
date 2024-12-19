@@ -14,4 +14,4 @@ dependencies:
   - jupyter
   - numba-stats
   - pip:
-      - sweights
+    - sweights
